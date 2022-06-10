@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sas_livraria_ds3m" >
+    <!-- Trafego de dados na rede -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- habilita o app a trafegar dados pela web -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SAS_Livraria_ds3m"
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name=".ui.HomeCliente"
+            android:exported="false" />
+        <!-- Faz com que o app possa se comunicar sem https (http). Só é permitido em tenpo de dessenvolvimento -->
+        <activity
+            android:name=".ui.CadastroClienteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
